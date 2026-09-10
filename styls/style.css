@@ -1,0 +1,941 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --f-one: 'regular';
+    --f-two: 'bold';
+    --f-three: 'extrabold';
+    --dark-color: black;
+    --white-color: white;
+    --main-color: #f76c42;
+    --second-color: #f6b452;
+    --tarnery-color: #18252c;
+    --beige-color: #FCF0DD;
+}
+html{
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'regular';
+    src: url(../fonts/static/Manrope-Regular.ttf);
+}
+@font-face {
+    font-family: 'bold';
+    src: url(../fonts/static/Manrope-Bold.ttf);
+}
+@font-face {
+    font-family: 'extrabold';
+    src: url(../fonts/static/Manrope-ExtraBold.ttf);
+}
+body {
+    font-family: var(--f-one);
+}
+a {
+    text-decoration: none;
+}
+header {
+    background: url(../image/banner-bg-img.jpg) center/cover;
+}
+nav {
+    border-bottom: 1px solid #8888883f;
+}
+nav .topnav {
+    padding: 10px 13%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav .topnav .date {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+}
+nav .topnav .date div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+nav .topnav .date div i {
+    background-color: var(--white-color);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+nav .topnav .date div span {
+    transition: 0.5s;
+    cursor: pointer;
+    color: var(--white-color);
+}
+nav .topnav .date div span:hover {
+    color: var(--dark-color);
+}
+nav .topnav .icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+nav .topnav .icons i {
+    transition: 0.2s;
+    cursor: pointer;
+    color: var(--white-color);
+}
+nav .topnav .icons i:hover {
+    color: var(--dark-color);
+}
+nav .downnav {
+    padding: 0 13%;
+}
+nav .downnav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+label{
+    display: none;
+}
+nav .downnav .navdate {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+nav .downnav .navdate ul {
+    display: flex;
+    gap: 20px;
+}
+nav .downnav .navdate ul li {
+    list-style: none;
+    padding: 30px 15px;
+    position: relative;
+}
+nav .downnav .navdate ul li .dropDownMenu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 210px;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    transform: scaley(0);
+    transform-origin: top;
+    transition: 0.5s;
+}
+nav .downnav .navdate ul li:hover .dropDownMenu {
+    transform: scaley(1);
+}
+nav .downnav .navdate ul li .dropDownMenu a {
+    font-size: 14px;
+    padding: 8px 13px;
+    border-radius: 5px;
+    transition: 0.5s;
+    color: var(--dark-color);
+}
+nav .downnav .navdate ul li .dropDownMenu a.active,
+nav .downnav .navdate ul li .dropDownMenu a:hover {
+    color: var(--white-color);
+    background-color: var(--main-color);
+}
+nav .downnav .navdate ul li>a {
+    color: var(--white-color);
+    display: flex;
+    align-items: end;
+    gap: 2px;
+    font-size: 14px;
+    opacity: 0.5;
+    position: relative;
+    transition: 0.5s;
+}
+nav .downnav .navdate ul li>a::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    width: 0;
+    height: 1px;
+    left: 0;
+    background-color: var(--white-color);
+    transition: 0.3s;
+}
+nav .downnav .navdate ul li a:hover:after {
+    width: 100%;
+}
+nav .downnav .navdate ul li>a:hover {
+    opacity: 1;
+}
+nav .downnav .navdate ul li>a i {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .downnav .navdate button {
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: var(--second-color);
+    color: var(--white-color);
+    font-family: var(--f-one);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+nav .downnav .navdate button:hover {
+    background-color: var(--main-color);
+}
+nav .downnav input {
+    display: none;
+}
+.header-deatils {
+    padding: 150px 13%;
+    color: var(--white-color);
+}
+.header-deatils .box {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.header-deatils .box div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header-deatils .box div i {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--second-color);
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-deatils .box div span {
+    font-size: 18px;
+    color: var(--second-color);
+}
+.header-deatils .box h1 {
+    font-family: var(--f-three);
+    line-height: 1.2;
+    font-size: 55px;
+}
+.header-deatils .box p {
+    font-size: 18px;
+}
+.btn {
+    width: max-content;
+    padding: 16px 40px;
+    background-color: var(--main-color);
+    border: none;
+    color: var(--white-color);
+    font-size: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+.btn:hover {
+    transform: translatey(-5px) scale(1.1);
+}
+.btn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: var(--dark-color);
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.btn:hover::after {
+    width: 100%;
+    right: unset;
+    left: 0;
+}
+section {
+    padding: 90px 13%;
+}
+.pricing {
+    background-color: var(--second-color);
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+.sec-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+}
+.sec-heading h2 {
+    font-size: 35px;
+    font-family: var(--f-three);
+}
+.sec-heading p {
+    opacity: 0.8;
+}
+.pricing .container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    display: grid;
+}
+.pricing .container .card {
+    gap: 23px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-color);
+    border: 2px solid transparent;
+    border-radius: 5px;
+    align-items: center;
+    transition: 0.5s;
+    padding: 30px 30px 50px;
+    position: relative;
+}
+.pricing .container .card div:first-of-type {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-color);
+    border-radius: 50%;
+}
+.pricing .container .card h3 {
+    font-size: 25px;
+}
+.pricing .container .card>p {
+    text-align: center;
+    opacity: 0.7;
+}
+.pricing .container .card div:nth-of-type(2) sub {
+    font-size: 20px;
+}
+.pricing .container .card div:nth-of-type(2) b {
+    font-size: 50px;
+    font-family: var(--f-three);
+    line-height: 1;
+}
+.pricing .container .card button {
+    width: 100%;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: var(--white-color);
+    color: var(--dark-color);
+    font-family: var(--f-two);
+}
+.pricing .container .card:hover .btn::after {
+    width: 100%;
+}
+.pricing .container .card:hover .btn {
+    color: var(--white-color);
+}
+.pricing .container .card:nth-of-type(2) .btn {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+.pricing .container .card:hover {
+    border: solid 2px black;
+}
+.pricing .container .card:nth-of-type(2) {
+    border: solid 2px black;
+}
+.pricing .container .card button:hover {
+    color: var(--white-color);
+}
+.pricing .container .card div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+}
+.pricing .container .card div:last-of-type p {
+    border-bottom: dotted 1px black;
+    gap: 5px;
+    width: max-content;
+    display: flex;
+    padding-bottom: 5px;
+}
+.pricing .container .card article {
+    position: absolute;
+    top: -20px;
+}
+.pricing .container .card article span {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+.Registration {
+    background-color: var(--beige-color);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.Registration article img:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.Registration article img:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    right: 0;
+}
+.Registration .sec-heading {
+    gap: 10px;
+}
+.Registration .sec-heading span {
+    color: var(--main-color);
+    font-size: 18px;
+}
+.Registration .sec-heading h2 {
+    font-size: 40px;
+    font-family: var(--f-three);
+    line-height: 1.1;
+    opacity: 0.8;
+}
+.Registration .input-group {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+.Registration .input-group input {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 0 20px;
+}
+.Registration .input-group input:focus {
+    outline: none;
+    box-shadow: 0 0 10px 2px red;
+}
+.Registration .input-group .btn {
+    transform: scale(1);
+    justify-content: center;
+}
+.Registration .container {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    display: grid;
+    width: 100%;
+}
+.Registration .container div {
+    height: 110px;
+    border-radius: 10px;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid transparent;
+    transition: 0.5s;
+    width: 100%;
+}
+.Registration .container div:hover {
+    border-color: black;
+}
+.Registration .container div b {
+    font-size: 22px;
+}
+.Registration .container div span {
+    color: var(--main-color);
+}
+.Registration p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+}
+.Registration p i {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--second-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Features {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--tarnery-color);
+    color: var(--white-color);
+    padding: 110px 9%;
+}
+.Features .sec-heading span {
+    color: var(--second-color);
+    font-size: 18px;
+}
+.Features .container {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+}
+.Features .container .card-img {
+    padding-right: 120px;
+    padding-bottom: 10px;
+}
+.Features .container .card-img div {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.Features .container .card-img div img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.Features .container .card-img:hover div img {
+    transform: scale(1.1);
+}
+.Features .container .date {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    display: grid;
+}
+.Features .container .date .card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Features .container .date .card div {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.Features .container .date .card:hover div {
+    transform: translatey(3px);
+    background-color: var(--second-color);
+}
+.Features .container .date .card h3 {
+    font-size: 25px;
+}
+.Features .container .date .card p {
+    line-height: 1.6;
+}
+.Support {
+    grid-template-columns: repeat(2 , 1fr);
+    padding: 0 9% 0 9%;
+    overflow: hidden;
+    background-color: var(--second-color);
+    display: grid;
+    gap: 30px;
+    align-items: center;
+}
+.Support .date {
+    gap: 21px;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.Support .date div:first-child {
+    width: 150px;
+    height: 110px;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 10px;
+    color: white;
+}
+.Support .date div:first-child b {
+    font-size: 40px;
+    font-family: var(--f-three);
+    display: flex;
+    align-items: start;justify-content: center;
+}
+.Support .date div:first-child b sup {
+    font-size: 25px;
+}
+.Support .date .sec-heading h2 {
+    font-size: 40px;
+}
+.Support .date p {
+    line-height: 1.9;
+    font-size: 15px;
+}
+.Support .date .btn{
+    transform: scale(1);
+    background-color: var(--tarnery-color);
+    border: 1px solid transparent;
+}
+.Support .date .btn:hover::after{
+    width: 100%;
+    background-color: var(--second-color);
+    border-color: black;
+}
+.Support .card-img {
+    width: 100%;
+    height: 100%;
+}
+.Support .card-img img {
+    width: 100%;
+    height: 100%;
+}
+.Choose{
+    padding: 90px 9%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--beige-color);
+}
+.Choose .sec-heading span{
+    color: var(--main-color);
+}
+.Choose .sec-heading h2{
+    font-size: 39px;
+}
+.Choose .container{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 20px;
+}
+.Choose .container .card{
+    background-color: var(--white-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 29px;
+    gap: 10px;
+    border: 2px solid transparent;
+    transition: 1s linear;
+}
+.Choose .container .card div{
+    transition: 1s linear;
+}
+.Choose .container .card:hover{
+    border-color: var(--dark-color);
+}
+.Choose .container .card:hover div{
+    transform: translateY(-2px);
+}
+.Choose .container .card:hover h3{
+    color: var(--main-color);
+}
+.Choose .container .card h3{
+    font-size: 25px;
+    word-spacing: 5px;
+    transition: 0.5s;
+    font-family: var(--f-two);
+}
+.Choose .container .card p{
+    line-height: 1.5;
+    opacity: 0.7;
+}
+.Questions{
+    display: grid;
+    grid-template-columns:repeat(2 , 1fr);
+    background-color: var(--tarnery-color);
+    color: var(--white-color);
+}
+.Questions .date{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-right: 120px;
+}
+.Questions .date .sec-heading{
+    align-items: start;
+    text-align: left;
+}
+.Questions .date .sec-heading span{
+    color: var(--main-color);
+}
+.Questions .date .sec-heading h2{
+    font-size: 35px;
+}
+.Questions .date > p{
+    opacity: 0.6;
+    line-height: 1.5;
+    font-weight: 100;
+}
+.Questions .date img{
+    border-radius: 10px;
+}
+.Questions .Questions-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.Questions .Questions-container .box{
+    transition: 0.5s;
+}
+.Questions .Questions-container .box button{
+    background-color: #243037;
+    border: 2px solid #2E3A41  ;
+    width: 100%;
+    padding: 20px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-color);
+    font-size: 18px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.Questions .Questions-container .box button i{
+    font-size: 15px;
+}
+.Questions .Questions-container .box p{
+    font-size: 15px;
+    opacity: 0.6;
+    line-height: 1.8;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.Questions .Questions-container .box:nth-child(1) button ,
+.Questions .Questions-container .box:hover button{
+    background-color: var(--main-color);
+}
+.Questions .Questions-container .box:nth-child(1) p ,
+.Questions .Questions-container .box:hover p{
+    height: 100px;
+}
+.Partners{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--beige-color);
+    padding: 90px 9%;
+}
+.Partners .sec-heading span{
+    color: var(--main-color);
+}
+.Partners .sec-heading h2{
+    font-size: 40px;
+}
+.Partners .container{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 30px;
+}
+.Partners .container .card{
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px;
+    transition: 0.5s;
+}
+.Partners .container .card:hover div img{
+    filter: brightness(0);
+    transform: translatey(-3px);
+}
+.Partners .container .card div{
+    width: 150px;
+    height: 100%;
+}
+.Partners .container .card div img{
+    width: 100%;
+    transition: 1s;
+}
+.Build{
+    background-color: var(--tarnery-color);
+    padding: 80px 9%;
+}
+.Build .date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Build .date .sec-heading{
+    gap: 5px;
+    align-items: start;
+    color: var(--white-color);
+}
+.Build .date .sec-heading h2{
+    font-family: var(--f-three);
+    font-size: 37px;
+}
+.Build .date .sec-heading p{
+    font-size: 18px;
+}
+.Build .date .btn:hover{
+    background-color: var(--second-color);
+}
+.Build .date .btn{
+    transform: scale(1);
+    gap: 10px;
+    padding: 15px 25px;
+}
+.Build .date .btn::after{
+    width: 0;
+}
+.Address .container{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 80px;
+}
+.Address .container .card{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 100%;
+}
+.Address .container .card h3{
+    font-size: 21px;
+    font-family: var(--f-three);
+    display: flex;
+}
+.Address .container .card ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left:15px;
+}
+.Address .container .card ul li::marker{
+    color: var(--main-color);
+}
+.Address .container .card ul li{
+    align-items: center;
+}
+.Address .container .card ul li p{
+    position: relative;
+    padding-bottom: 3px;
+    color: #8c92a0;
+    width: 100%;
+    font-size: 14px;
+    width: max-content;
+}
+.Address .container .card ul li p::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--main-color);
+    width: 0;
+    height: 1px;
+    transition: 0.5s;
+    opacity: 1;
+}
+.Address .container .card ul li:hover p::after{
+    width: 100%;
+}
+.Address .container .card:nth-child(4) ul li:first-child{
+    list-style-image: url(../image/location-icon.png);
+}
+.Address .container .card:nth-child(4) ul li:nth-of-type(2){
+    list-style-image: url(../image/phone-icon.png);
+}
+.Address .container .card:nth-child(4) ul li:last-child{
+    list-style-image: url(../image/email-icon.png);
+}
+.footer{
+    padding: 0 13%;
+}
+.footer .container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-top: 1px solid #8c92a063;
+    padding: 30px;
+}
+.footer .container div:first-child{
+    width: 200px;
+}
+.footer .container div:first-child img{
+    width: 100%;
+}
+.footer .container p{
+     font-size: 15px;
+     color: #8c92a0b9;
+}
+.footer .container  p a{
+    color: var(--main-color);
+    transition: 0.5s;
+}
+.footer .container  p a:hover{
+    color: var(--second-color);
+}
+.footer .container div:last-child{
+    display: flex;
+    gap: 20px;
+}
+.footer .container div:last-child i{
+    transition: 1s;
+    cursor: pointer;
+    font-size: 19px;
+}
+.footer .container div:last-child i:hover{
+    color: var(--main-color);
+    transform: translatey(-3px);
+}
+.bo{
+    position: relative;
+}
+.bo a{
+    position: absolute;
+    bottom: 110px;
+    right: 160px;
+    width: 80px;
+    height: 80px;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 10px;
+    animation: up 1.5s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+@keyframes up{
+    100%{
+        box-shadow: 0 0 10px 30px rgba(235, 124, 124, 0.637);
+    }
+    50%{
+        box-shadow: 0 0 10px 20px rgba(247, 138, 138, 0.664);
+    }
+    25%{
+        box-shadow: 0 0 10px 10px rgba(248, 138, 138, 0.411);
+    }
+    
+}
+.box button i{
+    color: var(--white-color);
+    font-size: 18PX;
+}

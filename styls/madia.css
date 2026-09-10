@@ -1,0 +1,690 @@
+@media (max-width:1200px) {
+.menu-icon{
+    display: none;
+}
+nav .downnav .navdate button{
+    width: max-content;
+}
+.header-deatils{
+    padding: 120px 13%;
+}
+.header-deatils .box p ,
+.header-deatils .box div span{
+    font-size: 16px;
+}
+.header-deatils .box h1{
+    font-size: 50px;
+}
+.sec-heading h2 {
+    font-size: 32px;
+}
+.pricing {
+    padding: 100px 7%;
+}
+.pricing .container{
+    gap: 10px;
+}
+.pricing .container .card h3{
+    font-size: 22px;
+}
+.Features{
+    padding: 110px 5%;
+}
+.Features .container .date .card h3{
+    font-size: 21px;
+}
+.Features .container .date .card p{
+    font-size: 15px;
+}
+.Features .container .card-img{
+    padding-right:40px;
+}
+.Support{
+    padding: 0 7% 0 7%;
+    gap: 20px;
+}
+.Support .date {
+    padding: 20px 0;
+    gap: 10px;
+}
+.Support .date div:first-child {
+    width: 130px;
+    height: 100px;
+    gap: 3px;
+}
+.Support .date div:first-child b {
+    font-size: 35px;
+}
+.Support .date .sec-heading h2 {
+    font-size: 32px;
+    width: max-content;
+}
+.Support .date p{
+    width: 100%;
+}
+.Choose{
+    padding: 60px 9%;
+}
+.Choose .sec-heading h2{
+    font-size: 33px;
+}
+.Choose .container{
+    gap: 10;
+}
+.Choose .container .card{
+    padding: 30px 15px;
+    gap: 5px;
+}
+.Choose .container .card h3{
+    font-size: 22px;
+}
+.Questions{
+    padding: 90px 9%;
+}
+.Questions .date{
+    gap: 30px;
+    padding-right: 30px;
+}
+.Questions .date .sec-heading h2{
+    font-size: 34px;
+}
+.Build{
+    padding: 80px 7%;
+}
+.Build .date .sec-heading h2{
+    font-size: 34px;
+}
+.Build .date .sec-heading p{
+    font-size: 17px;
+}
+.Address{
+    padding: 90px 9%;
+}
+.Address .container .card h3{
+    width: max-content;
+}
+.footer{
+    padding: 0 7%;
+}
+.bo a{
+    bottom: 100px;
+    right: 80px;
+}
+}
+@media (max-width:992px) {
+.footer .container p{
+    font-size: 14px;
+}
+.footer .container div:first-child{
+    width: 150px;
+}
+.footer .container div:last-child {
+    gap: 10px;
+}
+.footer .container div:last-child i{
+    font-size: 16px;
+}
+nav .topnav {
+        padding: 10px 5%;
+}
+.sec-heading h2 {
+    font-size: 30px;
+    font-family: var(--f-three);
+}
+.header-deatils{
+    padding: 50px 5%;
+}
+.header-deatils .box h1{
+    font-size: 45px;
+}
+.pricing {
+    padding: 70px 13%;
+}
+.menu-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+}
+nav .downnav input:checked ~ .navdate .menu-icon span{
+    box-shadow: 0 0 5px 3px red;
+    border-radius: 2px;
+}
+.menu-icon span{
+    height: 2px;
+    background-color: var(--main-color);
+    width: 30px;
+    transition: 0.5s;
+}
+nav .downnav input:checked ~ .navdate .menu-icon span:nth-child(1){
+    transform: translatey(-3px) rotate(45deg);
+    transform-origin: left;
+}
+nav .downnav input:checked ~ .navdate .menu-icon span:nth-child(2){
+    opacity: 0;
+}
+nav .downnav input:checked ~ .navdate .menu-icon span:nth-child(3){
+      transform: translatey(3px) rotate(-45deg);
+    transform-origin: left;
+}
+nav .container{
+    position: relative;
+    padding: 15px 0;
+}
+nav .downnav{
+    padding: 0 5%;
+}
+nav .downnav .navdate ul {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    border-radius: 7px;
+    flex-direction: column;
+    gap: 0;
+    transform-origin: top;
+    transform: scaley(0);
+    transition: 0.5s;
+}
+nav .downnav input:checked + .navdate ul{
+    transform: scaley(1);
+}
+nav .downnav .navdate ul li{
+    padding: 10px 0;
+}
+nav .downnav .navdate ul li:hover .dropDownMenu{
+    display: flex;
+    width: 100%;
+}
+nav .downnav .navdate ul li .dropDownMenu{
+    position: static;
+    display: none;
+}
+nav .downnav .navdate ul li > a{
+    opacity: 1;
+}
+nav{
+    position: relative;
+    z-index: 10;
+}
+.pricing .container {
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 30px;
+}
+.pricing .container .date .card:nth-of-type(3){
+    background-color: var();
+}
+.Registration{
+    padding: 60px 7%;
+}
+.Registration .sec-heading h2{
+    font-size: 35px;
+}
+.Registration .container div b{
+    font-size: 20px;
+}
+.Features{
+    padding: 80px 9%;
+}
+.Features .container .date .card h3{
+    font-size: 18px;
+    width: max-content;
+}
+.Features .container .date .card p{
+    font-size: 15px;
+}
+.Features .container{
+    align-items: center;
+    justify-content: center;
+}
+.Features .container .date .card{
+    gap: 10px;
+}
+.Support{
+    padding: 20px 12% 20px 12%;
+    gap: 20px;
+}
+.Support .date {
+    gap: 5px;
+}
+.Support .date div:first-child {
+    width: 120px;
+    height: 90px;
+    gap: 2px;
+}
+.Support .date div:first-child b {
+    font-size: 30px;
+}
+.Support .date .sec-heading h2 {
+    font-size: 28px;
+    width: max-content;
+}
+.Support .date p{
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.Support .card-img{
+    height: max-content;
+    }
+.Support .card-img {
+    width: 100%;
+}
+.Choose{
+    padding: 60px 12%;
+}
+.Choose .sec-heading h2{
+    font-size: 28px;
+}
+.Choose .container{
+    gap: 30px;
+    grid-template-columns: repeat(2 , 1fr);
+}
+.Choose .container .card h3{
+    font-size: 22px;
+}
+.Questions{
+    padding: 50px 5%;
+    gap: 30px;
+}
+.Questions .date{
+    gap: 30px;
+    padding-right: 0px;
+}
+.Questions .date .sec-heading h2{
+    font-size: 34px;
+}
+.Questions .date img{
+    width: 100%;
+}
+.Partners{
+    gap: 50px;
+    padding: 90px 13%;
+}
+.Partners .container{
+    gap: 15px;
+}
+.Partners .container .card{
+    padding: 10px 15px;
+    transition: 0.5s;
+}
+.Partners .container .card div{
+    width: 120px;
+}
+.Build{
+    padding: 50px 5%;
+}
+.Build .date .sec-heading h2{
+    font-size: 30px;
+}
+.Build .date .sec-heading p{
+    font-size: 16px;
+}
+.Address{
+    padding: 60px 15%;
+}
+.Address .container{
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 50px;
+}
+.Address .container.card h3{
+    font-size: 18px;
+}
+.bo a{
+    bottom: 150px;
+    right: 80px;
+}
+.Questions-container .box span{
+    font-size: 15px;
+    }
+    .Questions-container .box p{
+        font-size: 14px;
+    }
+}
+@media (max-width:768px) {
+    header{
+    background: linear-gradient(rgba(72, 72, 218, 0.267)), url(../image/banner-bg-img.jpg) center/cover;
+}
+.Partners .container .card div{
+    width: 100%;
+}
+nav .topnav .date{
+    font-size: 12px;
+}
+.header-deatils .box{
+    gap: 15px;
+}
+.header-deatils .box{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.header-deatils .box h1{
+    font-size: 40px;
+}
+.btn{
+    padding: 13px 20px;
+    font-size: 14px;
+}
+.sec-heading h2 {
+    font-size: 25px;
+}
+.sec-heading p{
+    font-size: 14px;
+}
+.pricing .container{
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
+.pricing .container .card{
+    width: 400px;
+    margin: auto;
+}
+.Registration .sec-heading h2{
+    font-size: 30px;
+}
+.Registration .sec-heading p{
+    font-size: 16px;
+}
+.Registration{
+    padding: 40px 13%;
+}
+.Registration .container{
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 7px;
+}
+.Registration .input-group{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 100%;
+}
+.Registration .input-group input{
+    padding:15px;
+}
+.Features{
+    padding: 50px 9%;
+}
+.Features .container .date .card h3{
+    font-size: 18px;
+}
+.Features .container{
+    grid-template-columns: repeat(1 , 1fr);
+}
+.Features .container .date .card p{
+    font-size: 16px;
+}
+.Features .container .date .card{
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+.Features .container .date .card div{
+    width: 60px;
+    height: 60px;
+}
+.Features .container .card-img div{
+    margin: auto;
+    width:350px;
+    height: 400px;
+}
+.Support{
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+.Support .date{
+    order: 2;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+.Support .date .sec-heading h2 {
+    font-size: 28px;
+    opacity: 0.8;
+}
+.Support .date p{
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.Support .card-img{
+    order: 1;
+    width: 320px;
+    margin: auto;
+}
+.Choose .container{
+    gap: 30px;
+    grid-template-columns: repeat(1 , 1fr);
+}
+.Choose{
+    padding: 60px 0%;
+}
+.Choose .sec-heading h2{
+    font-size: 25px;
+}
+.Choose .container .card{
+    justify-content: center;
+    width: 360px;
+    margin: auto;
+}
+.Choose .container .card:nth-of-type(3){
+    align-items: center;
+}
+.Choose .container .card h3{
+    font-size: 20px;
+}
+.Questions{
+    padding: 50px 9%;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.Questions .date{
+    gap: 20px;
+    padding-right: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+}
+.Questions .date .sec-heading{
+    align-items: center;
+    gap: 10px;
+}
+.Questions .date .sec-heading h2{
+    font-size: 30px;
+    line-height: 1;
+    width: max-content;
+
+}
+.Questions .date img{
+    width: 350px;
+}
+.Partners .sec-heading h2{
+    font-size: 35px;
+}
+.Build{
+    padding: 50px 5%;
+}
+.Build .date{
+    flex-direction: column;
+    gap: 15px;
+}
+.Build .date .sec-heading h2{
+    font-size: 27px;
+}
+.Build .date .sec-heading p{
+    font-size: 16px;
+}
+.footer .container{
+    flex-direction: column;
+    margin: auto;
+    gap: 10px;
+}
+.Questions-container .box span{
+    font-size: 18px;
+}
+}
+@media (max-width:564px) {
+    .Address .container{
+        grid-template-columns: repeat(1 , 1fr);
+    }
+    .Address .container .card{
+        align-items: center;
+        justify-content: start;
+    }
+    .Partners{
+        padding: 10px 5%;
+    }
+    .Partners .container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .Partners .container .card div{
+        width: 80%;
+    }
+    .Partners .container .card div img{
+        width: 100%;
+    }
+nav .topnav{
+    justify-content: center;
+    gap: 10px;
+}
+nav .topnav .date{
+    font-size: 10px;
+}
+nav .downnav img{
+    width: 150px;
+}
+nav .downnav .navdate button{
+    padding: 10px 15px;
+}
+.header-deatils .box{
+    gap: 10px;
+}
+.header-deatils .box{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.header-deatils .box h1{
+    font-size: 30px;
+}
+.header-deatils .box p ,
+.header-deatils .box div span{
+    font-size: 12px;
+}
+.bo a{
+    bottom: 155px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+}
+nav .downnav .navdate {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.sec-heading h2 { 
+    font-size: 22px;
+}
+.sec-heading p{
+    font-size: 12px;
+}
+.pricing .container .card{
+    width: 100%;
+    gap: 10px;
+}
+.pricing .container .card div:nth-of-type(2) sub{
+    font-size: 14px;
+}
+.pricing .container .card div:nth-of-type(2) b {
+    font-size: 30px;
+}
+.pricing .container .card div:last-of-type{
+    gap: 5px;
+}
+.Registration .sec-heading h2{
+    font-size: 25px;
+}
+.Registration .container{
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 10px;
+}
+.Registration{
+    padding: 20px 5%;
+    overflow: hidden;
+}
+.Registration p{
+    font-size: 15px;
+}
+.Features .container .date{
+    grid-template-columns: repeat(1 , 1fr);
+    gap: 30px;
+}
+.Choose{
+    padding: 60px 5%;
+}
+.Choose .sec-heading h2{
+    font-size: 25px;
+}
+.Choose .container .card{
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+
+.Choose .container .card h3{
+    font-size: 20px;
+}
+.Questions .date .sec-heading h2{
+    font-size: 22px;
+    width: 100%;
+    line-height: 1;
+}
+.Questions .date img{
+    width: 100%;
+}
+.Partners .sec-heading h2{
+    font-size: 30px;
+}
+.Build{
+    padding: 50px 5%;
+}
+.Build .date{
+    flex-direction: column;
+    gap: 15px;
+}
+.Build .date .sec-heading h2{
+    font-size: 23px;
+}
+.Build .date .sec-heading p{
+    font-size: 14px;
+}
+}
+@media (max-width:467px) {
+.pricing{
+    padding: 50px 5%;
+}
+.Registration{
+    padding: 20px 5%;
+}
+.Registration .container{
+    grid-template-columns: repeat(1 , 1fr);
+    gap: 10px;
+}
+.Registration p{
+    font-size: 14px;
+    gap: 1px;
+}
+.bo a{
+    bottom: 175px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+}
+}
